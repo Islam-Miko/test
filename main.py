@@ -38,3 +38,14 @@ class Person:
                     self.__house = house
                     self.__money -= house.price
                     house_market.remove(house)
+    @property
+    def house(self):
+        if self.__house is None:
+            print('NO House')
+        else:
+            print(f'{self.name} has house by name {self.__house.name}')
+
+adam = Person('adam', 30)
+adam.work(1000000)
+adam.buy_house()
+adam.house
